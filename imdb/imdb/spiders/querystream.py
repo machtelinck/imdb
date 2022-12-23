@@ -5,10 +5,10 @@ import pandas as pd
 import json
 import csv
 from pymongo import MongoClient
+import matplotlib as plt
 
 
-# Import the necessary Streamlit widgets
-import streamlit as st
+
 # Connect to your MongoDB database
 client = MongoClient("mongodb://localhost:27017") 
 movie_collection =client.films.sc
@@ -19,9 +19,7 @@ from fuzzywuzzy import process
 from pymongo import MongoClient
 import streamlit as st
 
-# Connectez-vous à votre base de données MongoDB
-client = MongoClient("mongodb://localhost:27017/")
-db = client["nom_de_votre_base_de_donnees"]
+
 
 
 
@@ -123,8 +121,6 @@ if show_chart:
     show_chart2 = st.checkbox("explain")
     if show_chart2:
         st.write("sur-representation des drama, donc la durée moyenne calculée par genre est biaisé  le total ne fait pas 100 pourcent comme un film a plusieurs genre")
-
-
 
 
 
